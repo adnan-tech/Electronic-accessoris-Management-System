@@ -1,0 +1,52 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <<div class='container w-50'>
+  <p *ngIf="gamecheck">Game Is Over</p>
+  <div class="row">
+    <div *ngFor="let i of cellsarr;index as j">
+      <div class="cell"  *ngIf="i!==null"(click)="getcell(j)">
+        <img  class="img-fluid" *ngIf="i.open" src={{i.img}}>
+      </div>
+      <div class="cellsame" *ngIf="i===null"></div>
+    </div>
+      </div>
+      <button class='btn btn-primary'(click)="resetgame()"> Reset Game</button>
+</div> -->
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="/"> Home</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto" >
+       <li class='nav-item' *ngFor="let i of navlinks">
+        <a class="nav-link" routerLink={{i.link}}  routerLinkActive={{i.active}}>{{i.txt}}<span *ngIf="i.txt==='Cart'" class="badge badge-danger badge-pill">{{authService.cartarr.length}}</span></a>
+</li>
+        <!-- Example single danger button
+<div class="btn-group">
+  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Courses
+  </button>
+  <div class="dropdown-menu">
+     </div>
+</div>
+      </li>
+      <li class='nav-item'>
+        <div class="btn-group">
+          <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Students
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/bye/StudentsList"  routerLinkActive="true">Students List</a>
+
+            <a class="dropdown-item" routerLink="/bye/AddStudent" routerLinkActive="true">Add Students</a>
+          </div>
+        </div>
+             </li>
+       <li class="nav-item">
+        <a class="nav-link"  routerLink="/hello"  routerLinkActive="true">Laptop</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link"  routerLink="/bye"  routerLinkActive="true">TV</a>
+       </li>-->
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+

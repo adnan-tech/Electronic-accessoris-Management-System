@@ -1,0 +1,63 @@
+<div class="container">
+  <h4 class="text-center"> Laptop</h4>
+  <div class="row text-center">
+    <div class="col-3 border bg-dark text-white">Brand</div>
+    <div class="col-3 border bg-dark text-white">Model</div>
+    <div class="col-3 border bg-dark text-white">Price</div>
+    <div class="col-3 border bg-dark"></div>
+  </div>
+  <div class="row text-center" *ngFor="let i of tvarr;index as j">
+    <div class="col-3 border">{{i.brand}}</div>
+    <div class="col-3 border">{{i.model}}</div>
+    <div class="col-3 border">{{i.price}}</div>
+    <div class="col-3 border"><button class="btn btn-primary" (click)="addcart(i)">Add<span class="fa fa-cart"></span></button></div>
+  </div>
+
+
+  <!-- You have visited {{pagenum}} pages on this site.<br>
+  <ul *ngFor="let i of pages">
+    <li>{{i}}</li>
+  </ul> -->
+  <div *ngIf="studentlist==='StudentsList'">
+  <div class="row text-center text-dark bg-success " >
+    <div class='col-4 border'>Name</div>
+    <div class='col-4 border'>Email</div>
+    <div class='col-4 border'>Course</div>
+    </div>
+    <div class="row text-center"  *ngFor="let i of studentarr;index as j">
+  <div class='col-4 border'>{{i.name}}</div>
+  <div class="col-4 border">{{i.email}}</div>
+  <div class="col-4 border">{{i.course}}</div>
+</div>
+</div>
+
+<div *ngIf="addstudent==='AddStudent'">
+  <label>Name :</label>
+  <input type="text" class='form-control' [(ngModel)]="name">
+  <label>Email :</label>
+  <input type="text" class='form-control' [(ngModel)]="email">
+  <label>Course :</label>
+  <select class='form-control' [(ngModel)]="coursename">
+    <option>Angular</option>
+    <option>ReactJs</option>
+    <option>Java</option>
+  </select>
+  <button class="btn btn-primary" (click)="newcreate()">Add Student</button>
+</div>
+  <!-- <h4>Create Extra Class</h4>
+  <label>Course  </label>
+  <select class='form-control' [(ngModel)]="coursename">
+    <option>Angular</option>
+    <option>ReactJs</option>
+    <option>Java</option>
+  </select>
+  <label>
+    Time
+  </label>
+  <input type="text" class="form-control" [(ngModel)]="timeinp" >
+  <label>
+    Faculty
+  </label>
+  <input type="text" class='form-control' [(ngModel)]="facultyinp" >
+  <button class="btn btn-primary" (click)="newcreate()">Create</button> -->
+</div>

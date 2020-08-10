@@ -1,0 +1,16 @@
+<div class="container">
+  <h4 class="text-center"> Mobiles</h4>
+  <div class="row text-center">
+    <div class="col-3 border bg-dark text-white">Brand</div>
+    <div class="col-3 border bg-dark text-white">Model</div>
+    <div class="col-3 border bg-dark text-white">Price</div>
+    <div class="col-3 border bg-dark">Qty</div>
+  </div>
+  <div class="row text-center" *ngFor="let i of cartarr;index as j">
+    <div class="col-3 border">{{i.brand}}</div>
+    <div class="col-3 border">{{i.model}}</div>
+    <div class="col-3 border">{{i.price}}</div>
+    <div class="col-3 border">{{i.quantity}}</div>
+  </div>
+  </div>
+

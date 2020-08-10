@@ -1,0 +1,53 @@
+<div class="container">
+  <h4 class="text-center"> Laptop</h4>
+  <div class="row text-center">
+    <div class="col-3 border bg-dark text-white">Brand</div>
+    <div class="col-3 border bg-dark text-white">Model</div>
+    <div class="col-3 border bg-dark text-white">Price</div>
+    <div class="col-3 border bg-dark"></div>
+  </div>
+  <div class="row text-center" *ngFor="let i of laptoparr;index as j">
+    <div class="col-3 border">{{i.brand}}</div>
+    <div class="col-3 border">{{i.model}}</div>
+    <div class="col-3 border">{{i.price}}</div>
+    <div class="col-3 border"><button class="btn btn-primary" (click)="addcart(i)">Add<span class="fa fa-cart"></span></button></div>
+  </div>
+
+
+  <!-- Welcome to the Mobile page<br>
+  You have visited {{pagenum}} pages on this site.<br>
+<ul *ngFor="let i of pages">
+  <li>{{i}}</li>
+</ul> -->
+  <!--
+
+<h4 class='text-center'>LOGIN</h4>
+  <label >
+    Username
+  </label>
+  <input type="text" class="form-control" placeholder="Enter Username " [(ngModel)]="uname">
+  <label >Password</label>
+  <input class="form-control" type="password" placeholder="Enter Password" [(ngModel)]="pwd">
+  <small *ngIf="loginFail" class="text-danger"> Please Enter Correct Username and Password </small><br>
+  <button class='btn btn-primary' (click)="loginuser()">Login</button>
+
+
+
+  <div *ngIf="coursname==='CoursesList'">
+  <div class="row text-center text-dark bg-success " >
+  <div clas='col-6 border'>S.No</div>
+  <div clas='col-6 border'>Course Name</div>
+  </div>
+  <div class="row text-center"  *ngFor="let i of courseinfo;index as j">
+<div class='col-6 border'>{{j+1}}</div>
+<div class="col-6 border">{{i}}</div>
+  </div>
+</div>
+
+<div class="m-4" *ngIf="addCourse==='addcourse'">
+  <label> Course Name</label>
+  <input type="text" class='form-control' [(ngModel)]="course">
+  <button class="btn btn-primary" (click)="newMsg()">Submit</button>
+
+</div> -->
+</div>

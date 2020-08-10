@@ -1,0 +1,36 @@
+<!-- Course Done
+<div *ngFor="let item of playerCB">
+  <input
+  type="checkbox"
+  id="{{item.name}}"
+  value="item.selected"
+  [(ngModel)]="item.selected"
+  (change)="emitChange()">{{item.name}}
+</div>
+Current Status
+<div *ngFor="let item of sportsRadio.sports">
+  <input
+  type="radio"
+  id="{{item}}"
+  name="radio001"
+  value="{{item}}"
+  checked="item===sportsRadio.selected"
+  [(ngModel)]="sportsRadio.selected"
+  (change)="emitChange()">
+  {{item}}
+</div> -->
+<div class="container">
+<h4 class="text-center"> Mobiles</h4>
+<div class="row text-center">
+  <div class="col-3 border bg-dark text-white">Brand</div>
+  <div class="col-3 border bg-dark text-white">Model</div>
+  <div class="col-3 border bg-dark text-white">Price</div>
+  <div class="col-3 border bg-dark"></div>
+</div>
+<div class="row text-center" *ngFor="let i of mobilearr;index as j">
+  <div class="col-3 border">{{i.brand}}</div>
+  <div class="col-3 border">{{i.model}}</div>
+  <div class="col-3 border">{{i.price}}</div>
+  <div class="col-3 border"><button class="btn btn-primary" (click)="addcart(i)">Add<span class="fa fa-cart"></span></button></div>
+</div>
+</div>
